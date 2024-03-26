@@ -1,7 +1,5 @@
 require("dotenv").config();
-const express = require("express");
-
-const app = express();
+const app = require("./views/scripts/app");
 
 const port = process.env.PORT;
 
