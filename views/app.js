@@ -6,10 +6,10 @@ const morgan = require("morgan");
 const flash = require("connect-flash");
 const session = require("express-session");
 
-const carRoute = require("../../routes/index");
+const carRoute = require("../routes/index");
 
 const app = express();
-const publicDir = path.resolve(__dirname, "../../public");
+const publicDir = path.resolve(__dirname, "../public");
 
 // Middleware
 app.use(cors());
@@ -18,11 +18,11 @@ app.use(express.json());
 app.use(morgan("dev"));
 
 // Mengatur folder statis untuk menyajikan file CSS, gambar, dan skrip
-app.use(express.static(path.join(__dirname, "../../views")));
+app.use(express.static(path.join(__dirname, "../views")));
 
 // Mengatur tipe MIME untuk file CSS
 app.get("/bootstrap/css/bootstrap.min.css", (req, res) => {
-  res.sendFile(path.join(__dirname, "../bootstrap/css/bootstrap.min.css"), {
+  res.sendFile(path.join(__dirname, "./bootstrap/css/bootstrap.min.css"), {
     headers: {
       "Content-Type": "text/css",
     },
@@ -31,7 +31,7 @@ app.get("/bootstrap/css/bootstrap.min.css", (req, res) => {
 
 app.get("/bootstrap/js/bootstrap.min.js", (req, res) => {
   res.sendFile(
-    path.join(__dirname, "../bootstrap/js/bootstrap.min.js"),
+    path.join(__dirname, "./bootstrap/js/bootstrap.min.js"),
     {
       headers: {
         "Content-Type": "text/javascript",
@@ -48,7 +48,7 @@ app.get("/bootstrap/js/bootstrap.min.js", (req, res) => {
 
 // Mengatur mesin template EJS dan folder views
 app.set("view engine", "ejs");
-app.set("views", path.join(__dirname, "../../views"));
+app.set("views", path.join(__dirname, "../views"));
 
 app.use(flash());
 app.use(session({ secret: "Rizki", saveUninitialized: true, resave: true }));
