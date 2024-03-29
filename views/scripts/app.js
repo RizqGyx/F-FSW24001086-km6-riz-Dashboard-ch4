@@ -3,10 +3,13 @@ const path = require("path");
 const fileUpload = require("express-fileupload");
 const cors = require("cors");
 const morgan = require("morgan");
+const flash = require("connect-flash");
+const session = require("express-session");
 
-const carRoute = require("../../routes/carRoutes");
+const carRoute = require("../../routes/index");
 
 const app = express();
+const publicDir = path.resolve(__dirname, "../../public");
 
 // Middleware
 app.use(cors());
@@ -47,10 +50,14 @@ app.get("/bootstrap/js/bootstrap.min.js", (req, res) => {
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "../../views"));
 
+app.use(flash());
+app.use(session({ secret: "Rizki", saveUninitialized: true, resave: true }));
+app.use(express.static(publicDir));
+
 app.get("/", (req, res) => {
   res.render("cars");
 });
 
-app.use("/cars", carRoute);
+app.use(carRoute);
 
 module.exports = app;

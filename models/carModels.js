@@ -3,15 +3,19 @@ const DB = require("../config/database");
 
 const { DataTypes } = Sequelize;
 
-const Car = DB.define(
+const Cars = DB.define(
   "cars",
   {
+    id: {
+      type: DataTypes.STRING,
+      primaryKey: true,
+    },
     name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
     rent_per_day: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.DECIMAL(10, 2),
       allowNull: false,
     },
     size: {
@@ -31,7 +35,7 @@ const Car = DB.define(
   }
 );
 
-module.exports = Car;
+module.exports = Cars;
 
 (async () => {
   await DB.sync();
