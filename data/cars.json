@@ -5,7 +5,9 @@
     "rentPerDay": 200000,
     "size": "Small",
     "photo": "./images/car01.min.jpg",
-    "url": null
+    "url": null,
+    "createdAt": "2023-05-15T08:30:00Z",
+    "updatedAt": "2023-05-15T09:45:00Z"
   },
   {
     "id": "9ff03bbc-b18c-4ba7-8f3a-4c4b5c2f6c77",
@@ -13,7 +15,9 @@
     "rentPerDay": 800000,
     "size": "Large",
     "photo": "./images/car02.min.jpg",
-    "url": null
+    "url": null,
+    "createdAt": "2022-10-20T15:10:00Z",
+    "updatedAt": "2022-10-21T08:20:00Z"
   },
   {
     "id": "bf6b5c43-1377-4ae0-8908-310c64266f81",
@@ -21,7 +25,9 @@
     "rentPerDay": 900000,
     "size": "Large",
     "photo": "./images/car03.min.jpg",
-    "url": null
+    "url": null,
+    "createdAt": "2024-01-05T12:00:00Z",
+    "updatedAt": "2024-01-06T09:30:00Z"
   },
   {
     "id": "5b67f1d7-92d4-41c7-8577-4435740aadf1",
@@ -29,7 +35,9 @@
     "rentPerDay": 900000,
     "photo": "./images/car04.min.jpg",
     "size": "Large",
-    "url": null
+    "url": null,
+    "createdAt": "2023-07-10T18:45:00Z",
+    "updatedAt": "2023-07-12T06:20:00Z"
   },
   {
     "id": "23574b8f-3e89-4685-a348-67c1f7e5b3c4",
@@ -37,7 +45,9 @@
     "rentPerDay": 200000,
     "size": "Small",
     "photo": "./images/car05.min.jpg",
-    "url": null
+    "url": null,
+    "createdAt": "2022-12-01T09:15:00Z",
+    "updatedAt": "2022-12-02T07:30:00Z"
   },
   {
     "id": "3eead6db-c536-406b-9bc5-85d4c6e38a76",
@@ -45,7 +55,9 @@
     "rentPerDay": 900000,
     "size": "Medium",
     "photo": "./images/car06.min.jpg",
-    "url": null
+    "url": null,
+    "createdAt": "2023-11-25T14:20:00Z",
+    "updatedAt": "2023-11-26T10:35:00Z"
   },
   {
     "id": "752685ce-dd39-40e5-9af5-93fdd36dea7e",
@@ -53,7 +65,9 @@
     "rentPerDay": 900000,
     "size": "Medium",
     "photo": "./images/car07.min.jpg",
-    "url": null
+    "url": null,
+    "createdAt": "2023-02-17T11:50:00Z",
+    "updatedAt": "2023-02-18T13:25:00Z"
   },
   {
     "id": "d97e0af5-2728-4ce3-ba7f-9d83a0837db6",
@@ -61,7 +75,9 @@
     "rentPerDay": 300000,
     "size": "Small",
     "photo": "./images/car08.min.jpg",
-    "url": null
+    "url": null,
+    "createdAt": "2024-05-30T07:05:00Z",
+    "updatedAt": "2024-05-31T09:40:00Z"
   },
   {
     "id": "0d5de078-a5fc-456b-9487-47eb450a01c6",
@@ -69,7 +85,9 @@
     "rentPerDay": 1000000,
     "size": "Large",
     "photo": "./images/car09.min.jpg",
-    "url": null
+    "url": null,
+    "createdAt": "2022-08-10T16:30:00Z",
+    "updatedAt": "2022-08-11T14:15:00Z"
   },
   {
     "id": "6dfa349e-631c-46c0-a037-5c73902ff738",
@@ -77,7 +95,9 @@
     "rentPerDay": 300000,
     "size": "Large",
     "photo": "./images/car10.min.jpg",
-    "url": null
+    "url": null,
+    "createdAt": "2023-04-22T08:15:00Z",
+    "updatedAt": "2023-04-23T11:20:00Z"
   },
   {
     "id": "803593fb-b857-4a01-adc4-651538217a04",
@@ -85,7 +105,9 @@
     "rentPerDay": 700000,
     "size": "Small",
     "photo": "./images/car11.min.jpg",
-    "url": null
+    "url": null,
+    "createdAt": "2024-02-05T13:40:00Z",
+    "updatedAt": "2024-02-06T08:55:00Z"
   },
   {
     "id": "e0a96736-a2d5-40ca-87de-64b59cac85d8",
@@ -93,7 +115,9 @@
     "rentPerDay": 800000,
     "size": "Medium",
     "photo": "./images/car12.min.jpg",
-    "url": null
+    "url": null,
+    "createdAt": "2022-11-12T10:25:00Z",
+    "updatedAt": "2022-11-13T09:30:00Z"
   },
   {
     "id": "e39f2965-57da-4d8f-afdb-74f6c54e69f0",
@@ -101,7 +125,9 @@
     "rentPerDay": 900000,
     "size": "Large",
     "photo": "./images/car13.min.jpg",
-    "url": null
+    "url": null,
+    "createdAt": "2023-09-18T15:55:00Z",
+    "updatedAt": "2023-09-19T07:40:00Z"
   },
   {
     "id": "c18a5545-2ce2-4330-aa3b-1bbcf6247519",
@@ -109,7 +135,9 @@
     "rentPerDay": 700000,
     "size": "Small",
     "photo": "./images/car14.min.jpg",
-    "url": null
+    "url": null,
+    "createdAt": "2024-07-03T11:10:00Z",
+    "updatedAt": "2024-07-04T10:25:00Z"
   },
   {
     "id": "72530cba-051d-49d8-822b-deaf2e5330ca",
@@ -117,7 +145,9 @@
     "rentPerDay": 900000,
     "size": "Medium",
     "photo": "./images/car15.min.jpg",
-    "url": null
+    "url": null,
+    "createdAt": "2023-10-08T14:20:00Z",
+    "updatedAt": "2023-10-09T08:45:00Z"
   },
   {
     "id": "79cc327b-2b0f-4042-acdf-78386b2f8ebd",
@@ -125,7 +155,9 @@
     "rentPerDay": 200000,
     "size": "Large",
     "photo": "./images/car16.min.jpg",
-    "url": null
+    "url": null,
+    "createdAt": "2022-12-25T09:35:00Z",
+    "updatedAt": "2022-12-26T11:55:00Z"
   },
   {
     "id": "22c969a7-04ce-4efb-a479-7ab3bc094cb9",
@@ -133,7 +165,9 @@
     "rentPerDay": 1000000,
     "size": "Small",
     "photo": "./images/car17.min.jpg",
-    "url": null
+    "url": null,
+    "createdAt": "2023-08-30T07:40:00Z",
+    "updatedAt": "2023-08-31T09:20:00Z"
   },
   {
     "id": "1bfda124-5175-4b90-bee7-d66affdbcc66",
@@ -141,7 +175,9 @@
     "rentPerDay": 700000,
     "size": "Large",
     "photo": "./images/car18.min.jpg",
-    "url": null
+    "url": null,
+    "createdAt": "2024-04-10T13:20:00Z",
+    "updatedAt": "2024-04-11T08:10:00Z"
   },
   {
     "id": "08cbd537-497f-4305-b7b4-e7493c703a2c",
@@ -149,7 +185,9 @@
     "rentPerDay": 600000,
     "size": "Large",
     "photo": "./images/car19.min.jpg",
-    "url": null
+    "url": null,
+    "createdAt": "2022-09-14T14:45:00Z",
+    "updatedAt": "2022-09-15T10:30:00Z"
   },
   {
     "id": "950575d6-958c-422e-a46b-c3ed2e1315ed",
@@ -157,7 +195,9 @@
     "rentPerDay": 700000,
     "size": "Large",
     "photo": "./images/car20.min.jpg",
-    "url": null
+    "url": null,
+    "createdAt": "2023-01-28T16:20:00Z",
+    "updatedAt": "2023-01-29T09:35:00Z"
   },
   {
     "id": "b89117fc-69e1-4366-ba21-9d6a0b2bfb04",
@@ -165,7 +205,9 @@
     "rentPerDay": 400000,
     "size": "Large",
     "photo": "./images/car21.min.jpg",
-    "url": null
+    "url": null,
+    "createdAt": "2024-06-05T12:10:00Z",
+    "updatedAt": "2024-06-06T10:20:00Z"
   },
   {
     "id": "fc1d3297-ab17-40a9-a79c-ca7307ed5faa",
@@ -173,7 +215,9 @@
     "rentPerDay": 300000,
     "size": "Large",
     "photo": "./images/car22.min.jpg",
-    "url": null
+    "url": null,
+    "createdAt": "2022-12-15T13:30:00Z",
+    "updatedAt": "2022-12-16T08:40:00Z"
   },
   {
     "id": "432d9ed1-e330-4953-ac33-f51a60a5799b",
@@ -181,7 +225,9 @@
     "rentPerDay": 200000,
     "size": "Large",
     "photo": "./images/car23.min.jpg",
-    "url": null
+    "url": null,
+    "createdAt": "2023-03-20T15:40:00Z",
+    "updatedAt": "2023-03-21T07:55:00Z"
   },
   {
     "id": "32e7e56f-1a00-455f-bf4b-dbd2c8c4daaf",
@@ -189,7 +235,9 @@
     "rentPerDay": 600000,
     "size": "Large",
     "photo": "./images/car24.min.jpg",
-    "url": null
+    "url": null,
+    "createdAt": "2024-08-10T14:50:00Z",
+    "updatedAt": "2024-08-11T08:15:00Z"
   },
   {
     "id": "e76e884b-8f3e-4b90-a717-9239676d0191",
@@ -197,6 +245,8 @@
     "rentPerDay": 1000000,
     "size": "Small",
     "photo": "./images/car25.min.jpg",
-    "url": null
+    "url": null,
+    "createdAt": "2023-06-28T09:25:00Z",
+    "updatedAt": "2023-06-29T07:30:00Z"
   }
 ]
