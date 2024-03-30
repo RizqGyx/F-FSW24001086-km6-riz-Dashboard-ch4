@@ -1,24 +1,27 @@
 const express = require("express");
 const path = require("path");
-const fileUpload = require("express-fileupload");
 const cors = require("cors");
 const morgan = require("morgan");
 const flash = require("connect-flash");
 const session = require("express-session");
+const multer = require("multer");
 
 const carRoute = require("../routes/index");
+const { fileStore, fileFilter } = require("../utils/fileImageValidation");
 
 const app = express();
 const publicDir = path.resolve(__dirname, "../public");
 
 // Middleware
 app.use(cors());
-app.use(fileUpload());
 app.use(express.json());
 app.use(morgan("dev"));
 
 // Mengatur folder statis untuk menyajikan file CSS, gambar, dan skrip
 app.use(express.static(path.join(__dirname, "../views")));
+
+// Mengatur File Image Upload
+app.use(multer({ storage: fileStore, fileFilter: fileFilter }).single("image"));
 
 // Mengatur tipe MIME untuk file CSS
 app.get("/bootstrap/css/bootstrap.min.css", (req, res) => {

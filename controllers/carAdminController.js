@@ -23,6 +23,8 @@ const createCarPage = async (req, res) => {
 
 const createCar = async (req, res) => {
   try {
+    const image = req.file.path;
+
     await Car.create(req.body);
     req.flash("message", "Ditambah");
     res.redirect("/cars");
