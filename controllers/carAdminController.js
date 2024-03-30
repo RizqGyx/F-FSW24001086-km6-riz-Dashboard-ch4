@@ -1,4 +1,5 @@
-const Car = require("../models/carModels");
+const Car = require("../models/car");
+const { generateRandomId } = require("../utils/generateId");
 
 const carPage = async (req, res) => {
   try {
@@ -25,7 +26,13 @@ const createCar = async (req, res) => {
   try {
     const image = req.file.path;
 
-    await Car.create(req.body);
+    const carData = {
+      id: generateRandomId(),
+      ...req.body,
+      photo: image,
+    };
+
+    await Car.create(carData);
     req.flash("message", "Ditambah");
     res.redirect("/cars");
   } catch (err) {

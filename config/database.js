@@ -1,13 +1,12 @@
-const Sequelize = require("sequelize");
+require("dotenv").config();
 
-const DB = new Sequelize(
-  process.env.DB_DATABASE,
-  process.env.DB_USER,
-  process.env.DB_PASSWORD,
-  {
+module.exports = {
+  development: {
+    username: process.env.DB_USERNAME,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_NAME,
     host: process.env.DB_HOST,
-    dialect: "mysql",
-  }
-);
-
-module.exports = DB;
+    dialect: "postgres",
+    port: process.env.DB_PORT,
+  },
+};

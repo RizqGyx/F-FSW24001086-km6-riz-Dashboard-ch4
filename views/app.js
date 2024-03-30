@@ -15,6 +15,7 @@ const publicDir = path.resolve(__dirname, "../public");
 // Middleware
 app.use(cors());
 app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 app.use(morgan("dev"));
 
 // Mengatur folder statis untuk menyajikan file CSS, gambar, dan skrip

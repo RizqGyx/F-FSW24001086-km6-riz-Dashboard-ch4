@@ -1,5 +1,6 @@
 const { response } = require("../utils/response");
-const Cars = require("../models/carModels");
+const Cars = require("../models/car");
+const { generateRandomId } = require("../utils/generateId");
 
 const getCars = async (req, res) => {
   try {
@@ -41,7 +42,12 @@ const getCarById = async (req, res) => {
 
 const createCar = async (req, res) => {
   try {
-    const cars = await Cars.create(req.body);
+    const carData = {
+      id: generateRandomId(),
+      ...req.body,
+    };
+
+    const cars = await Cars.create(carData);
 
     response(201, cars, "Success", "Create New Car Data", req, res, false);
   } catch (err) {

@@ -4,8 +4,7 @@
     "name": "Sedan Ford F150 2022",
     "rentPerDay": 200000,
     "size": "Small",
-    "photo": "./images/car01.min.jpg",
-    "url": null,
+    "photo": "2023-05-15T08:30:00Z_car01.min.jpg",
     "createdAt": "2023-05-15T08:30:00Z",
     "updatedAt": "2023-05-15T09:45:00Z"
   },
@@ -14,8 +13,7 @@
     "name": "Convertible BMW X5 2019",
     "rentPerDay": 800000,
     "size": "Large",
-    "photo": "./images/car02.min.jpg",
-    "url": null,
+    "photo": "2022-10-20T15:10:00Z_car02.min.jpg",
     "createdAt": "2022-10-20T15:10:00Z",
     "updatedAt": "2022-10-21T08:20:00Z"
   },
@@ -24,8 +22,7 @@
     "name": "Sedan Lincoln MKZ 2021",
     "rentPerDay": 900000,
     "size": "Large",
-    "photo": "./images/car03.min.jpg",
-    "url": null,
+    "photo": "2024-01-05T12:00:00Z_car03.min.jpg",
     "createdAt": "2024-01-05T12:00:00Z",
     "updatedAt": "2024-01-06T09:30:00Z"
   },
@@ -33,9 +30,8 @@
     "id": "5b67f1d7-92d4-41c7-8577-4435740aadf1",
     "name": "Hatchback BMW M5 2018",
     "rentPerDay": 900000,
-    "photo": "./images/car04.min.jpg",
+    "photo": "2023-07-10T18:45:00Z_car04.min.jpg",
     "size": "Large",
-    "url": null,
     "createdAt": "2023-07-10T18:45:00Z",
     "updatedAt": "2023-07-12T06:20:00Z"
   },
@@ -44,8 +40,7 @@
     "name": "Minivan Lincoln Navigator 2020",
     "rentPerDay": 200000,
     "size": "Small",
-    "photo": "./images/car05.min.jpg",
-    "url": null,
+    "photo": "2022-12-01T09:15:00Z_car05.min.jpg",
     "createdAt": "2022-12-01T09:15:00Z",
     "updatedAt": "2022-12-02T07:30:00Z"
   },
@@ -54,8 +49,7 @@
     "name": "Hatchback Ford Fiesta 2016",
     "rentPerDay": 900000,
     "size": "Medium",
-    "photo": "./images/car06.min.jpg",
-    "url": null,
+    "photo": "2023-11-25T14:20:00Z_car06.min.jpg",
     "createdAt": "2023-11-25T14:20:00Z",
     "updatedAt": "2023-11-26T10:35:00Z"
   },
@@ -64,8 +58,7 @@
     "name": "Sedan Honda Accord 2020",
     "rentPerDay": 900000,
     "size": "Medium",
-    "photo": "./images/car07.min.jpg",
-    "url": null,
+    "photo": "2023-02-17T11:50:00Z_car07.min.jpg",
     "createdAt": "2023-02-17T11:50:00Z",
     "updatedAt": "2023-02-18T13:25:00Z"
   },
@@ -74,8 +67,7 @@
     "name": "Pickup Lincoln Navigator 2014",
     "rentPerDay": 300000,
     "size": "Small",
-    "photo": "./images/car08.min.jpg",
-    "url": null,
+    "photo": "2024-05-30T07:05:00Z_car08.min.jpg",
     "createdAt": "2024-05-30T07:05:00Z",
     "updatedAt": "2024-05-31T09:40:00Z"
   },
@@ -84,8 +76,7 @@
     "name": "Pickup Buick LaCrosse 2012",
     "rentPerDay": 1000000,
     "size": "Large",
-    "photo": "./images/car09.min.jpg",
-    "url": null,
+    "photo": "2022-08-10T16:30:00Z_car09.min.jpg",
     "createdAt": "2022-08-10T16:30:00Z",
     "updatedAt": "2022-08-11T14:15:00Z"
   },
@@ -94,8 +85,7 @@
     "name": "Hatchback BMW X5 2019",
     "rentPerDay": 300000,
     "size": "Large",
-    "photo": "./images/car10.min.jpg",
-    "url": null,
+    "photo": "2023-04-22T08:15:00Z_car10.min.jpg",
     "createdAt": "2023-04-22T08:15:00Z",
     "updatedAt": "2023-04-23T11:20:00Z"
   },
@@ -104,8 +94,7 @@
     "name": "Coupe Chevy Malibu 2019",
     "rentPerDay": 700000,
     "size": "Small",
-    "photo": "./images/car11.min.jpg",
-    "url": null,
+    "photo": "2024-02-05T13:40:00Z_car11.min.jpg",
     "createdAt": "2024-02-05T13:40:00Z",
     "updatedAt": "2024-02-06T08:55:00Z"
   },
@@ -114,8 +103,7 @@
     "name": "Van BMW X3 2018",
     "rentPerDay": 800000,
     "size": "Medium",
-    "photo": "./images/car12.min.jpg",
-    "url": null,
+    "photo": "2022-11-12T10:25:00Z_car12.min.jpg",
     "createdAt": "2022-11-12T10:25:00Z",
     "updatedAt": "2022-11-13T09:30:00Z"
   },
@@ -124,8 +112,7 @@
     "name": "SUV Chevy Malibu 2017",
     "rentPerDay": 900000,
     "size": "Large",
-    "photo": "./images/car13.min.jpg",
-    "url": null,
+    "photo": "2023-09-18T15:55:00Z_car13.min.jpg",
     "createdAt": "2023-09-18T15:55:00Z",
     "updatedAt": "2023-09-19T07:40:00Z"
   },
@@ -134,8 +121,7 @@
     "name": "Pickup Chevy Malibu 2020",
     "rentPerDay": 700000,
     "size": "Small",
-    "photo": "./images/car14.min.jpg",
-    "url": null,
+    "photo": "2024-07-03T11:10:00Z_car14.min.jpg",
     "createdAt": "2024-07-03T11:10:00Z",
     "updatedAt": "2024-07-04T10:25:00Z"
   },
@@ -144,8 +130,7 @@
     "name": "Pickup Lincoln MKS 2017",
     "rentPerDay": 900000,
     "size": "Medium",
-    "photo": "./images/car15.min.jpg",
-    "url": null,
+    "photo": "2023-10-08T14:20:00Z_car15.min.jpg",
     "createdAt": "2023-10-08T14:20:00Z",
     "updatedAt": "2023-10-09T08:45:00Z"
   },
@@ -154,8 +139,7 @@
     "name": "Convertible Chevy Silverado 2021",
     "rentPerDay": 200000,
     "size": "Large",
-    "photo": "./images/car16.min.jpg",
-    "url": null,
+    "photo": "2022-12-25T09:35:00Z_car16.min.jpg",
     "createdAt": "2022-12-25T09:35:00Z",
     "updatedAt": "2022-12-26T11:55:00Z"
   },
@@ -164,8 +148,7 @@
     "name": "Pickup Lincoln MKS 2015",
     "rentPerDay": 1000000,
     "size": "Small",
-    "photo": "./images/car17.min.jpg",
-    "url": null,
+    "photo": "2023-08-30T07:40:00Z_car17.min.jpg",
     "createdAt": "2023-08-30T07:40:00Z",
     "updatedAt": "2023-08-31T09:20:00Z"
   },
@@ -174,8 +157,7 @@
     "name": "Sedan Dodge Ram 2014",
     "rentPerDay": 700000,
     "size": "Large",
-    "photo": "./images/car18.min.jpg",
-    "url": null,
+    "photo": "2024-04-10T13:20:00Z_car18.min.jpg",
     "createdAt": "2024-04-10T13:20:00Z",
     "updatedAt": "2024-04-11T08:10:00Z"
   },
@@ -184,8 +166,7 @@
     "name": "Convertible Ford F150 2021",
     "rentPerDay": 600000,
     "size": "Large",
-    "photo": "./images/car19.min.jpg",
-    "url": null,
+    "photo": "2022-09-14T14:45:00Z_car19.min.jpg",
     "createdAt": "2022-09-14T14:45:00Z",
     "updatedAt": "2022-09-15T10:30:00Z"
   },
@@ -194,8 +175,7 @@
     "name": "Pickup Audi A4 2012",
     "rentPerDay": 700000,
     "size": "Large",
-    "photo": "./images/car20.min.jpg",
-    "url": null,
+    "photo": "2023-01-28T16:20:00Z_car20.min.jpg",
     "createdAt": "2023-01-28T16:20:00Z",
     "updatedAt": "2023-01-29T09:35:00Z"
   },
@@ -204,8 +184,7 @@
     "name": "SUV Dodge Durango 2013",
     "rentPerDay": 400000,
     "size": "Large",
-    "photo": "./images/car21.min.jpg",
-    "url": null,
+    "photo": "2024-06-05T12:10:00Z_car21.min.jpg",
     "createdAt": "2024-06-05T12:10:00Z",
     "updatedAt": "2024-06-06T10:20:00Z"
   },
@@ -214,8 +193,7 @@
     "name": "Coupe Audi S5 2020",
     "rentPerDay": 300000,
     "size": "Large",
-    "photo": "./images/car22.min.jpg",
-    "url": null,
+    "photo": "2022-12-15T13:30:00Z_car22.min.jpg",
     "createdAt": "2022-12-15T13:30:00Z",
     "updatedAt": "2022-12-16T08:40:00Z"
   },
@@ -224,8 +202,7 @@
     "name": "Pickup Toyota Camry 2022",
     "rentPerDay": 200000,
     "size": "Large",
-    "photo": "./images/car23.min.jpg",
-    "url": null,
+    "photo": "2023-03-20T15:40:00Z_car23.min.jpg",
     "createdAt": "2023-03-20T15:40:00Z",
     "updatedAt": "2023-03-21T07:55:00Z"
   },
@@ -234,8 +211,7 @@
     "name": "Sedan Nissan Pathfiner 2022",
     "rentPerDay": 600000,
     "size": "Large",
-    "photo": "./images/car24.min.jpg",
-    "url": null,
+    "photo": "2024-08-10T14:50:00Z_car24.min.jpg",
     "createdAt": "2024-08-10T14:50:00Z",
     "updatedAt": "2024-08-11T08:15:00Z"
   },
@@ -244,8 +220,7 @@
     "name": "Wagon Honda Civic 2015",
     "rentPerDay": 1000000,
     "size": "Small",
-    "photo": "./images/car25.min.jpg",
-    "url": null,
+    "photo": "2023-06-28T09:25:00Z_car25.min.jpg",
     "createdAt": "2023-06-28T09:25:00Z",
     "updatedAt": "2023-06-29T07:30:00Z"
   }
