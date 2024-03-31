@@ -58,8 +58,14 @@ app.use(flash());
 app.use(session({ secret: "Rizki", saveUninitialized: true, resave: true }));
 app.use(express.static(publicDir));
 
+// Menangani permintaan untuk halaman Landing Page
 app.get("/", (req, res) => {
-  res.render("cars");
+  res.render("landingPage");
+});
+
+// Menangani permintaan untuk halaman Pencarian Mobil
+app.get("/cars", (req, res) => {
+  res.render("cariMobil");
 });
 
 app.use(carRoute);
