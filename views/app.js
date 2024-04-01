@@ -26,7 +26,7 @@ app.use(multer({ storage: fileStore, fileFilter: fileFilter }).single("image"));
 
 // Mengatur tipe MIME untuk file CSS
 app.get("/bootstrap/css/bootstrap.min.css", (req, res) => {
-  res.sendFile(path.join(__dirname, "./bootstrap/css/bootstrap.min.css"), {
+  res.sendFile(path.join(__dirname, "/bootstrap/css/bootstrap.min.css"), {
     headers: {
       "Content-Type": "text/css",
     },
@@ -35,7 +35,7 @@ app.get("/bootstrap/css/bootstrap.min.css", (req, res) => {
 
 app.get("/bootstrap/js/bootstrap.min.js", (req, res) => {
   res.sendFile(
-    path.join(__dirname, "./bootstrap/js/bootstrap.min.js"),
+    path.join(__dirname, "/bootstrap/js/bootstrap.min.js"),
     {
       headers: {
         "Content-Type": "text/javascript",
@@ -64,8 +64,12 @@ app.get("/", (req, res) => {
 });
 
 // Menangani permintaan untuk halaman Pencarian Mobil
-app.get("/cars", (req, res) => {
+app.get("/client", (req, res) => {
   res.render("cariMobil");
+});
+
+app.get("/error", (req, res) => {
+  res.render("error");
 });
 
 app.use(carRoute);
