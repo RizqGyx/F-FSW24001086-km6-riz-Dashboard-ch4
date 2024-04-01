@@ -2,7 +2,7 @@ require("dotenv").config();
 const fs = require("fs");
 const Car = require("../models/carModels");
 
-const cars = JSON.parse(fs.readFileSync(`${__dirname}/cars.json`, "utf-8"));
+const cars = JSON.parse(fs.readFileSync(`${__dirname}/car.json`, "utf-8"));
 
 const importData = async () => {
   try {
