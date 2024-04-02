@@ -4,34 +4,42 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Bagian Judul -->
-    <title>ERROR</title>
+    <title><%= statusCode %> : <%= message%></title>
 
     <!-- Bagian Icon -->
     <link rel="icon" href="./images/errorIcon.png" />
 
     <!-- Bagian CSS Sendiri -->
-    <link rel="stylesheet" href="/css/dashboard.css" />
+    <link rel="stylesheet" href="/css/error.css" />
 
     <!-- Bagian CSS Untuk Bootstrap -->
     <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css" />
   </head>
   <body>
     <div class="container error d-flex align-items-center">
-      <div class="d-flex align-items-center g-1 justify-content-between h-75">
-        <img src="./images/errorHero.jpg" alt="Error" class="error-hero" />
-        <div class="border-box h-100 rounded"></div>
-        <div
-          class="text-center d-flex flex-column g-5 h-100 justify-content-evenly"
-        >
-          <h1 class="status_code">4 0 4</h1>
-          <p class="status_info fw-bold">Data Not Found</p>
-          <a href="/"
-            ><button
-              class="px-4 py-2 rounded bg-danger text-light fw-bold border-0"
-            >
-              Go Back
-            </button></a
+      <div
+        class="row justify-content-center align-items-center h-75 position-relative"
+      >
+        <div class="col-sm-6">
+          <img src="./images/errorHero.jpg" alt="Error" class="w-100" />
+        </div>
+        <div class="col-sm-6">
+          <div
+            class="text-center d-flex flex-column justify-content-evenly px-5"
           >
+            <h1 class="status_code"><%= statusCode %></h1>
+            <p class="status_info fw-bold">
+              <% if(statusCode !== 404) { %> Bad Request <%= message %> <% }
+              else { %> <%= message %> <% } %>
+            </p>
+            <a href="/"
+              ><button
+                class="back-button px-4 py-2 rounded bg-danger text-light fw-bold border-0"
+              >
+                Go Back
+              </button></a
+            >
+          </div>
         </div>
       </div>
     </div>

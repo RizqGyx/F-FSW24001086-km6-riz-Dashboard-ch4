@@ -25,30 +25,16 @@ app.use(express.static(path.join(__dirname, "../views")));
 app.use(multer({ storage: fileStore, fileFilter: fileFilter }).single("image"));
 
 // Mengatur tipe MIME untuk file CSS
-app.get("/bootstrap/css/bootstrap.min.css", (req, res) => {
-  res.sendFile(path.join(__dirname, "/bootstrap/css/bootstrap.min.css"), {
-    headers: {
-      "Content-Type": "text/css",
-    },
-  });
-});
+app.use(
+  "/bootstrap/css",
+  express.static(path.join(__dirname, "/bootstrap/css/bootstrap.min.css"))
+);
 
-app.get("/bootstrap/js/bootstrap.min.js", (req, res) => {
-  res.sendFile(
-    path.join(__dirname, "/bootstrap/js/bootstrap.min.js"),
-    {
-      headers: {
-        "Content-Type": "text/javascript",
-      },
-    },
-    (err) => {
-      if (err) {
-        console.error(err);
-        res.status(404).end();
-      }
-    }
-  );
-});
+// Mengatur tipe MIME untuk file JS
+app.use(
+  "/bootstrap/js",
+  express.static(path.join(__dirname, "/bootstrap/js/bootstrap.min.js"))
+);
 
 // Mengatur mesin template EJS dan folder views
 app.set("view engine", "ejs");

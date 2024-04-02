@@ -1,16 +1,20 @@
-const Car = require("../models/car");
+const { Car } = require("../models");
 const { generateRandomId } = require("../utils/generateId");
 
 const carPage = async (req, res) => {
   try {
     const cars = await Car.findAll();
 
+    if (!cars) {
+      res.render("error.ejs", { message: "Data Not Found", statusCode: 404 });
+    }
+
     res.render("cars/index.ejs", {
       cars,
       message: req.flash("message", ""),
     });
   } catch (err) {
-    res.render("error.ejs", { message: err.message });
+    res.render("error.ejs", { message: err.message, statusCode: 400 });
   }
 };
 
@@ -40,21 +44,21 @@ const createCar = async (req, res) => {
   }
 };
 
-const updateCarPage = async (req, res) => {
+const editCarPage = async (req, res) => {
   try {
     const car = await Car.findByPk(req.params.id);
-    res.render("cars/update.ejs", { car });
+    res.render("cars/edit.ejs", { car });
   } catch (err) {
     res.render("error.ejs", { message: err.message });
   }
 };
 
-const updateCar = async (req, res) => {
+const editCar = async (req, res) => {
   try {
-    await Car.update(req.body, {
+    await Car.edit(req.body, {
       where: { id: req.params.id },
     });
-    req.flash("message", "Diupdate");
+    req.flash("message", "Diedit");
     res.redirect("/cars");
   } catch (err) {
     res.render("error.ejs", { message: err.message });
@@ -75,7 +79,7 @@ module.exports = {
   carPage,
   createCarPage,
   createCar,
-  updateCarPage,
-  updateCar,
+  editCarPage,
+  editCar,
   deleteCar,
 };
