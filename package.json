@@ -7,8 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon server.js",
     "start": "node server.js",
-    "import-data": "node ./seeders/seeder.js --import",
-    "clear-data": "node ./seeders/seeder.js --delete"
+    "import-data": "npx sequelize-cli db:seed:all",
+    "clear-data": "npx sequelize-cli db:seed:undo:all"
   },
   "keywords": [
     "Kampus Merdeka Batch 6",

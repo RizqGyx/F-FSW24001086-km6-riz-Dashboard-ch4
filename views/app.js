@@ -68,10 +68,6 @@ app.get("/client", (req, res) => {
   res.render("cariMobil");
 });
 
-app.get("/error", (req, res) => {
-  res.render("error");
-});
-
 app.use(carRoute);
 
 module.exports = app;
