@@ -1,16 +1,33 @@
 const { Car } = require("../models");
+const { Op } = require("sequelize");
 const { generateRandomId } = require("../utils/generateId");
 
 const carPage = async (req, res) => {
   try {
-    const cars = await Car.findAll();
+    const size_value = req.query.size || "";
+    const searchTerm = req.query.search || "";
+    const page = parseInt(req.query.page) || 1;
+    const limit = parseInt(req.query.limit) || 10;
 
-    if (!cars) {
-      res.render("error.ejs", { message: "Data Not Found", statusCode: 404 });
-    }
+    const offset = (page - 1) * limit;
+
+    const { count, rows: cars } = await Car.findAndCountAll({
+      where: {
+        size: size_value,
+        name: { [Op.iLike]: `%${searchTerm}%` },
+      },
+      offset,
+      limit,
+    });
+
+    const totalPages = Math.ceil(count / limit);
 
     res.render("cars/index.ejs", {
       cars,
+      size: size_value,
+      searchTerm,
+      currentPage: page,
+      totalPages,
       message: req.flash("message", ""),
     });
   } catch (err) {

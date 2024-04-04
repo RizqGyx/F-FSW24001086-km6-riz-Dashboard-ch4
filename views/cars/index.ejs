@@ -15,11 +15,210 @@
 
     <!-- Bagian CSS Untuk Bootstrap -->
     <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css" />
+
+    <!-- Bagian Link Untuk Icon Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
-    <div class="sidebar"><h1>HALOOOOOOOOOOO Home</h1></div>
+    <div class="container-fluid">
+      <div class="row flex-nowrap">
+        <!-- Sidebar -->
+        <div class="row col-auto col-md-3 col-xl-2 px-sm-2 px-0 shadow">
+          <!-- Sidebar Content -->
+          <div
+            class="side-nav px-0 d-flex flex-column align-items-center pt-3 min-vh-100 col-4"
+          >
+            <a
+              href="/"
+              class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-decoration-none justify-content-center mx-auto"
+            >
+              <img src="../images/icon.png" alt="Home" class="sideimg-home" />
+            </a>
+            <ul
+              class="nav nav-pills d-flex flex-column mb-sm-auto mb-0 align-items-center py-1"
+              id="menu"
+            >
+              <li class="nav-item w-100">
+                <a
+                  href="#"
+                  class="nav-link align-middle px-0 d-flex flex-column justify-content-center align-items-center w-100"
+                >
+                  <img
+                    src="../images/nav-dashboard.png"
+                    alt="Dashboard"
+                    class="nav-img"
+                  />
+                  <span class="ms-1 d-none d-sm-inline text-light"
+                    >Dashboard</span
+                  >
+                </a>
+              </li>
+              <li class="nav-item w-100">
+                <a
+                  href="#"
+                  class="nav-link px-0 align-middle d-flex flex-column justify-content-center align-items-center side-main-clicked w-100 rounded-0"
+                >
+                  <img
+                    src="../images/nav-cars.png"
+                    alt="Cars"
+                    class="nav-img"
+                  />
+                  <span class="ms-1 d-none d-sm-inline text-light"
+                    >Cars</span
+                  ></a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-8 py-3 px-0">
+            <img src="../images/logo.png" alt="Logo" class="logo" />
+            <div class="side-list py-4 pt-5">
+              <h6 class="p-2 fw-bold side-sub-unclicked">CARS</h6>
+              <h6 class="p-2 side-sub-clicked fw-bold">List Car</h6>
+            </div>
+          </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="col px-0">
+          <!-- Header -->
+          <header
+            class="d-flex flex-row align-items-center justify-content-between shadow-sm py-3"
+          >
+            <!-- Header Content -->
+            <div
+              class="menu-toogle d-flex flex-column justify-content-between px-3"
+            >
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+            </div>
+            <div class="right-header">
+              <form class="d-flex" role="search">
+                <input
+                  class="form-control rounded-0 search-input"
+                  type="search"
+                  placeholder="Search"
+                  aria-label="Search"
+                />
+                <button class="search-btn btn rounded-0 fw-bold" type="submit">
+                  Search
+                </button>
+              </form>
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <img
+                  src="./images/user.png"
+                  alt="User Profile"
+                  class="image-user"
+                />
+                Muhammad Rizki
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">My Profile</a></li>
+                <li><a class="dropdown-item" href="#">FAQ</a></li>
+                <li><a class="dropdown-item" href="#">Report Problem</a></li>
+                <li><a class="dropdown-item" href="#">Settings</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#">Log Out</a></li>
+              </ul>
+            </div>
+          </header>
+
+          <!-- Main Content Body -->
+          <main class="p-3">
+            <!-- Breadcrumb -->
+            <nav
+              style="--bs-breadcrumb-divider: '>'"
+              aria-label="breadcrumb"
+              class="breadnav fw-bold px-3 pt-3"
+            >
+              <!-- Breadcrumb Content -->
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item">Cars</li>
+                <li class="breadcrumb-item active" aria-current="page">
+                  <span class="fw-bold">List Car</span>
+                </li>
+              </ol>
+            </nav>
+
+            <!-- Section: List of Cars -->
+            <section
+              class="d-flex justify-content-between align-items-center px-3"
+            >
+              <h5 class="fw-bold">List Car</h5>
+              <a href="/cars/create" class="btn-add">
+                <i class="fas fa-plus"></i><span>Add New Car</span>
+              </a>
+            </section>
+
+            <!-- Section: Filter by Size -->
+            <section class="d-flex justify-content-start align-items-center">
+              <ul class="nav justify-content-center gap-2">
+                <li class="nav-item">
+                  <a
+                    class="nav-link py-2 rounded-0 primary-outline-nonactive <% if (!size) { %>active<% } %>"
+                    href="/cars?page=1&limit=<%= limit %>"
+                    >All</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link py-2 rounded-0 primary-outline-nonactive <% if (size === 'Small') { %>active<% } %>"
+                    href="/cars?page=1&limit=<%= limit %>&size=Small"
+                    >Small</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link py-2 rounded-0 primary-outline-nonactive <% if (size === 'Medium') { %>active<% } %>"
+                    href="/cars?page=1&limit=<%= limit %>&size=Medium"
+                    >Medium</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link py-2 rounded-0 primary-outline-nonactive <% if (size === 'Large') { %>active<% } %>"
+                    href="/cars?page=1&limit=<%= limit %>&size=Large"
+                    >Large</a
+                  >
+                </li>
+              </ul>
+            </section>
+
+            <!-- Section: Car Cards -->
+            <section class="d-flex justify-content-center-align-items-center">
+              <div class="row m-3 mx-auto d-flex justify-content-evenly w-100">
+                <% if (cars.length > 0) { %> <% cars.map((car) => { %>
+                <!-- Car Card Content -->
+                <% }) %> <% } else { %>
+                <div
+                  class="alert alert-danger text-center fw-bold mt-2 w-100"
+                  role="alert"
+                  style="width: 50vw !important"
+                >
+                  Car Not Found!
+                </div>
+                <% } %>
+              </div>
+            </section>
+          </main>
+        </div>
+      </div>
+    </div>
 
     <!-- Script JS Untuk Bootstrap -->
-    <script src="/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
