@@ -119,6 +119,19 @@ body {
   bottom: 2rem;
 }
 
+.primary-outline-nonactive {
+  border: #aeb7e1 1px solid !important;
+  color: #aeb7e1 !important;
+  background-color: #cfd4ed !important;
+}
+
+.primary-outline-nonactive.active {
+  border: #0d28a6 1px solid !important;
+  color: #0d28a6 !important;
+  background-color: #cfd4ed !important;
+  font-weight: bold;
+}
+
 .cancel-btn {
   color: #0d28a6 !important;
   border: 1px solid #0d28a6 !important;

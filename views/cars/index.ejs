@@ -74,28 +74,28 @@
               <ul class="nav justify-content-center gap-2">
                 <li class="nav-item">
                   <a
-                    class="nav-link py-2 rounded-0 primary-outline-nonactive <% if (!size) { %>active<% } %>"
+                    class="nav-link py-2 rounded-1 primary-outline-nonactive <% if (!size) { %>active<% } %>"
                     href="/cars?page=1&limit=<%= limit %>"
                     >All</a
                   >
                 </li>
                 <li class="nav-item">
                   <a
-                    class="nav-link py-2 rounded-0 primary-outline-nonactive <% if (size === 'Small') { %>active<% } %>"
+                    class="nav-link py-2 rounded-1 primary-outline-nonactive <% if (size === 'Small') { %>active<% } %>"
                     href="/cars?page=1&limit=<%= limit %>&size=Small"
                     >Small</a
                   >
                 </li>
                 <li class="nav-item">
                   <a
-                    class="nav-link py-2 rounded-0 primary-outline-nonactive <% if (size === 'Medium') { %>active<% } %>"
+                    class="nav-link py-2 rounded-1 primary-outline-nonactive <% if (size === 'Medium') { %>active<% } %>"
                     href="/cars?page=1&limit=<%= limit %>&size=Medium"
                     >Medium</a
                   >
                 </li>
                 <li class="nav-item">
                   <a
-                    class="nav-link py-2 rounded-0 primary-outline-nonactive <% if (size === 'Large') { %>active<% } %>"
+                    class="nav-link py-2 rounded-1 primary-outline-nonactive <% if (size === 'Large') { %>active<% } %>"
                     href="/cars?page=1&limit=<%= limit %>&size=Large"
                     >Large</a
                   >
@@ -104,20 +104,66 @@
             </section>
 
             <!-- Section: Car Cards -->
-            <section class="d-flex justify-content-center-align-items-center">
+            <section class="d-flex justify-content-center align-items-center">
               <div class="row m-3 mx-auto d-flex justify-content-evenly w-100">
                 <% if (cars.length > 0) { %> <% cars.map((car) => { %>
                 <!-- Car Card Content -->
+                <div class="card" style="width: 18rem">
+                  <div class="card-body">
+                    <h5 class="card-title"><%= car.name %></h5>
+                    <p class="card-text">Size: <%= car.size %></p>
+                    <!-- Add more details if needed -->
+                  </div>
+                </div>
                 <% }) %> <% } else { %>
                 <div
-                  class="alert alert-danger text-center fw-bold mt-2 w-100"
+                  class="alert alert-danger text-center fw-bold mt-2 w-75"
                   role="alert"
-                  style="width: 50vw !important"
                 >
                   Car Not Found!
                 </div>
                 <% } %>
               </div>
+            </section>
+
+            <section class="d-flex justify-content-center align-items-center">
+              <nav aria-label="Pagination">
+                <ul class="pagination">
+                  <% if (currentPage > 1) { %>
+                  <li class="page-item">
+                    <a
+                      class="page-link"
+                      href="/cars?page=<%= currentPage - 1 %>&limit=<%= limit %>&size=<%= size %>"
+                      aria-label="Previous"
+                    >
+                      <span aria-hidden="true">&laquo;</span>
+                      <span class="visually-hidden">Previous</span>
+                    </a>
+                  </li>
+                  <% } %> <% for (let i = 1; i <= totalPages; i++) { %>
+                  <li
+                    class="page-item <% if (currentPage === i) { %>active<% } %>"
+                  >
+                    <a
+                      class="page-link"
+                      href="/cars?page=<%= i %>&limit=<%= limit %>&size=<%= size %>"
+                      ><%= i %></a
+                    >
+                  </li>
+                  <% } %> <% if (currentPage < totalPages) { %>
+                  <li class="page-item">
+                    <a
+                      class="page-link"
+                      href="/cars?page=<%= currentPage + 1 %>&limit=<%= limit %>&size=<%= size %>"
+                      aria-label="Next"
+                    >
+                      <span aria-hidden="true">&raquo;</span>
+                      <span class="visually-hidden">Next</span>
+                    </a>
+                  </li>
+                  <% } %>
+                </ul>
+              </nav>
             </section>
           </main>
         </div>

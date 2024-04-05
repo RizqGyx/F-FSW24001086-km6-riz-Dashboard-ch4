@@ -59,7 +59,7 @@
             </section>
 
             <!-- Section: Content -->
-            <form action="/customers/admin/update/<%= customer.id %>" method="post" class="bg-light py-5">
+            <form action="/cars/admin/update/<%= customer.id %>" method="post" class="bg-light py-5">
               <div class="container">
                 <div>
                   <div class="col-12 col-lg-6">
@@ -154,7 +154,9 @@
                   </div>
               </div>
               <div class="btn-wrapper d-flex gap-3 position-absolute">
-                <a href="/cars"><button class="cancel-btn px-3 py-2 fw-bold">Cancel</button></a>
+                <a href="/cars">
+                  <button class="cancel-btn px-3 py-2 fw-bold" type="button">Cancel</button>
+                </a>
                 <button class="save-btn px-3 py-2 fw-bold" type="submit">Save</button>
               </div>
             </form>

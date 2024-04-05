@@ -27,7 +27,7 @@ export const Header = () => {
         aria-expanded="false"
       >
         <img
-          src="./images/user.png"
+          src="../images/user.png"
           alt="User Profile"
           class="image-user"
         />
