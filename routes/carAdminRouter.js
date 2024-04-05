@@ -15,7 +15,11 @@ router.post(
 
 // Route for updating a car data
 router.get("/edit/:id", carAdminController.editCarPage);
-router.post("/admin/edit/:id", carAdminController.editCar);
+router.post(
+  "/admin/edit/:id",
+  upload.single("photo"),
+  carAdminController.editCar
+);
 
 // Route for deleting a car data
 router.post("/admin/delete/:id", carAdminController.deleteCar);

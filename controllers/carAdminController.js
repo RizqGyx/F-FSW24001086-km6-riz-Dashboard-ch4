@@ -83,9 +83,16 @@ const editCarPage = async (req, res) => {
 
 const editCar = async (req, res) => {
   try {
-    await Car.update(req.body, {
-      where: { id: req.params.id },
-    });
+    const car = await Car.findByPk(req.params.id);
+
+    let updatedCarData = { ...req.body };
+
+    if (req.file) {
+      updatedCarData.photo = req.file.filename;
+    }
+
+    await car.update(updatedCarData);
+
     req.flash("message", "Diedit");
     res.redirect("/cars");
   } catch (err) {

@@ -5,8 +5,7 @@ const multerStorage = multer.diskStorage({
     cb(null, "./public/images/cars");
   },
   filename: (req, file, cb) => {
-    const ext = file.mimetype.split("/")[1];
-    cb(null, `cars-${file.originalname}.${ext}`);
+    cb(null, `cars-${file.originalname}`);
   },
 });
 
