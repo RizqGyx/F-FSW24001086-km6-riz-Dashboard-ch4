@@ -155,7 +155,7 @@
             </section>
 
             <!-- Section: Content -->
-            <form action="/cars/admin/edit/<%= car.id %>" method="post" class="bg-light py-5">
+            <form action="/cars/admin/edit/<%= car.id %>" method="post" class="bg-light py-5" enctype="multipart/form-data">
               <div class="container">
                 <div>
                   <div class="col-12 col-lg-6">
@@ -201,7 +201,7 @@
                     <div class="row">
                       <div class="col-4">
                         <label
-                          for="capacity"
+                          for="size"
                           class="form-label"
                           >Ukuran<i style="color: red">*</i></label
                         >
@@ -210,10 +210,10 @@
                         <div class="mb-3">
                           <select
                             class="form-select"
-                            name="capacity"
-                            id="capacity"
+                            name="size"
+                            id="size"
                           >
-                            <option hidden>ukuran</option>
+                            <option hidden>Ukuran</option>
                             <option value="Small" <% if (car.size === "Small") { %> selected <% } %>>Small</option>
                             <option value="Medium" <% if (car.size === "Medium") { %> selected <% } %>>Medium</option>
                             <option value="Large" <% if (car.size === "Large") { %> selected <% } %>>Large</option>
@@ -235,7 +235,7 @@
                             <input
                               type="file"
                               class="form-control"
-                              name="image"
+                              name="photo"
                               accept="image/*"
                             />
                           </div>

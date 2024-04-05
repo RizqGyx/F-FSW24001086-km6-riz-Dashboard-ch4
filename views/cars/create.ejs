@@ -58,7 +58,7 @@
             </section>
 
             <!-- Section: Content -->
-            <form action="/cars/admin/create" method="post" class="bg-light py-5">
+            <form action="/cars/admin/create" method="post" class="bg-light py-5" enctype="multipart/form-data">
               <div class="container">
                 <div>
                   <div class="col-12 col-lg-6">
@@ -113,10 +113,10 @@
                         <div class="mb-3">
                           <select
                             class="form-select"
-                            name="capacity"
-                            id="capacity"
+                            name="size"
+                            id="size"
                           >
-                            <option hidden>ukuran</option>
+                            <option hidden>Ukuran</option>
                             <option value="Small">Small</option>
                             <option value="Medium">Medium</option>
                             <option value="Large">Large</option>
@@ -127,7 +127,7 @@
                     <div class="row">
                       <div class="col-4">
                         <label
-                          for="image"
+                          for="photo"
                           class="form-label"
                           >Foto<i style="color: red">*</i></label
                         >

@@ -1,37 +1,6 @@
 const { Car } = require("../models");
 const { Op } = require("sequelize");
-const imagekit = require("../libs/imageKit");
-const multer = require("multer");
 const { generateRandomId } = require("../utils/generateId");
-
-const multerStorage = multer.diskStorage({
-  destination: (req, res, cb) => {
-    cb("null", "public/img/cars");
-  },
-  filename: (req, res, cb) => {
-    const ext = file.mimetype.split("/")[1];
-    cb(null, `cars-${req.body.name}.${ext}`);
-  },
-});
-
-const multerFilter = (req, file, cb) => {
-  if (
-    file.mimetype == "image/png" ||
-    file.mimetype == "image/jpg" ||
-    file.mimetype == "image/jpeg"
-  ) {
-    cb(null, true);
-  } else {
-    return cb(null, false);
-  }
-};
-
-const upload = multer({
-  storage: multerStorage,
-  fileFilter: multerFilter,
-});
-
-exports.uploadProductPhoto = upload.single("photo");
 
 const carPage = async (req, res) => {
   try {
@@ -82,7 +51,10 @@ const createCarPage = async (req, res) => {
 
 const createCar = async (req, res) => {
   try {
-    const image = req.files.path;
+    let image = null;
+    if (req.file) {
+      image = req.file.filename;
+    }
 
     const carData = {
       id: generateRandomId(),
@@ -91,6 +63,8 @@ const createCar = async (req, res) => {
     };
 
     await Car.create(carData);
+    console.log(image);
+    console.log(req.body);
     req.flash("message", "Ditambah");
     res.redirect("/cars");
   } catch (err) {
