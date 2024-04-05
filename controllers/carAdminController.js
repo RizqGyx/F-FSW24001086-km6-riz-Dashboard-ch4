@@ -10,17 +10,19 @@ const carPage = async (req, res) => {
       whereCondition.size = req.query.size;
     }
 
+    let searchTerm = "";
+    if (req.query.search) {
+      searchTerm = req.query.search.trim();
+      whereCondition.name = { [Op.iLike]: `%${searchTerm}%` };
+    }
+
     const size_value = req.query.size || "";
-    const searchTerm = req.query.search || "";
     const page = parseInt(req.query.page) || 1;
     const limit = parseInt(req.query.limit) || 6;
     const offset = (page - 1) * limit;
 
     const { count, rows: cars } = await Car.findAndCountAll({
-      where: {
-        ...whereCondition,
-        name: { [Op.iLike]: `%${searchTerm}%` },
-      },
+      where: whereCondition,
       offset,
       limit,
     });

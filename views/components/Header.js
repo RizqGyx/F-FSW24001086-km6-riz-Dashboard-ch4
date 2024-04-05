@@ -8,10 +8,11 @@ export const Header = () => {
       <div class="bar"></div>
     </div>
     <div class="right-header">
-      <form class="d-flex" role="search">
+      <form class="d-flex" role="search" action="/cars" method="GET">
         <input
           class="form-control rounded-0 search-input"
           type="search"
+          name="search"
           placeholder="Search"
           aria-label="Search"
         />
