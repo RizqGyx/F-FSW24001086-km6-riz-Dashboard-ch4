@@ -4,13 +4,11 @@ const cors = require("cors");
 const morgan = require("morgan");
 const flash = require("connect-flash");
 const session = require("express-session");
-const multer = require("multer");
 
 const carRoute = require("../routes/index");
-const { fileStore, fileFilter } = require("../utils/fileImageValidation");
 
 const app = express();
-const publicDir = path.resolve(__dirname, "../public");
+const publicDir = path.resolve(__dirname, ".././public");
 
 // Middleware
 app.use(cors());
@@ -20,9 +18,6 @@ app.use(morgan("dev"));
 
 // Mengatur folder statis untuk menyajikan file CSS, gambar, dan skrip
 app.use(express.static(path.join(__dirname, "../views")));
-
-// Mengatur File Image Upload
-app.use(multer({ storage: fileStore, fileFilter: fileFilter }).single("image"));
 
 // Mengatur tipe MIME untuk file CSS
 app.use(
@@ -52,10 +47,6 @@ app.get("/", (req, res) => {
 // Menangani permintaan untuk halaman Pencarian Mobil
 app.get("/client", (req, res) => {
   res.render("cariMobil");
-});
-
-app.get("/test", (req, res) => {
-  res.render("cars/create");
 });
 
 app.use(carRoute);
