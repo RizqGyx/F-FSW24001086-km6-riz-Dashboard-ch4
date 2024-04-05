@@ -154,6 +154,26 @@ body {
   border: 1px solid green !important;
 }
 
+.alert-success {
+  background-color: #73ca5c !important;
+}
+
+.alert-flash {
+  display: none;
+  right: 10%;
+  top: 12%;
+  text-align: center;
+  color: white !important;
+  font-weight: 400 !important;
+  font-size: 1rem;
+  width: 60%;
+}
+
+.alert-flash.show {
+  display: block;
+  opacity: 1;
+}
+
 .card-image {
   height: 200px;
   width: 100%;

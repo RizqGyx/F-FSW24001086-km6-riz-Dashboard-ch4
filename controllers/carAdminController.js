@@ -82,8 +82,7 @@ const createCarPage = async (req, res) => {
 
 const createCar = async (req, res) => {
   try {
-    const files = req.file;
-    const image = files.path;
+    const image = req.files.path;
 
     const carData = {
       id: generateRandomId(),
