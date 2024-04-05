@@ -54,6 +54,10 @@ app.get("/client", (req, res) => {
   res.render("cariMobil");
 });
 
+app.get("/test", (req, res) => {
+  res.render("cars/create");
+});
+
 app.use(carRoute);
 
 module.exports = app;

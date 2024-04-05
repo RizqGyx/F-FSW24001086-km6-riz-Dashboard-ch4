@@ -7,6 +7,10 @@
   font-family: "IBM Plex Sans", sans-serif;
 }
 
+body {
+  background-color: #f4f5f7;
+}
+
 /* Sidebar Page Start */
 .side-nav {
   background-color: #0d28a6;
@@ -45,10 +49,6 @@
 /* Sidebar Page End */
 
 /* Header Page Start */
-header {
-  margin-left: 1rem;
-}
-
 .menu-toogle {
   height: 30px;
   cursor: pointer;
@@ -93,6 +93,10 @@ header {
 /* Header Page End */
 
 /* Main Page Start */
+.main-content {
+  background-color: #f4f5f7;
+}
+
 .breadnav {
   font-size: 0.75rem;
 }
@@ -109,5 +113,31 @@ header {
 
 .btn-add i {
   margin-right: 1rem;
+}
+
+.btn-wrapper {
+  bottom: 2rem;
+}
+
+.cancel-btn {
+  color: #0d28a6 !important;
+  border: 1px solid #0d28a6 !important;
+}
+
+.cancel-btn:hover {
+  background-color: #0d28a6 !important;
+  color: #fff !important;
+}
+
+.save-btn {
+  color: white;
+  border: 1px solid #0d28a6 !important;
+  background-color: #0d28a6 !important;
+}
+
+.save-btn:hover {
+  background-color: green !important;
+  color: #fff !important;
+  border: 1px solid green !important;
 }
 /* Main Page End */

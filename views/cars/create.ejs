@@ -20,112 +20,17 @@
     <div class="container-fluid">
       <div class="row flex-nowrap">
         <!-- Sidebar -->
-        <div class="row col-auto col-md-3 col-xl-2 px-sm-2 px-0 shadow">
-          <!-- Sidebar Content -->
-          <div
-            class="side-nav px-0 d-flex flex-column align-items-center pt-3 min-vh-100 col-4"
-          >
-            <a
-              href="/"
-              class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-decoration-none justify-content-center mx-auto"
-            >
-              <img src="../images/icon.png" alt="Home" class="sideimg-home" />
-            </a>
-            <ul
-              class="nav nav-pills d-flex flex-column mb-sm-auto mb-0 align-items-center py-1"
-              id="menu"
-            >
-              <li class="nav-item w-100">
-                <a
-                  href="#"
-                  class="nav-link align-middle px-0 d-flex flex-column justify-content-center align-items-center w-100"
-                >
-                  <img
-                    src="../images/nav-dashboard.png"
-                    alt="Dashboard"
-                    class="nav-img"
-                  />
-                  <span class="ms-1 d-none d-sm-inline text-light"
-                    >Dashboard</span
-                  >
-                </a>
-              </li>
-              <li class="nav-item w-100">
-                <a
-                  href="#"
-                  class="nav-link px-0 align-middle d-flex flex-column justify-content-center align-items-center side-main-clicked w-100 rounded-0"
-                >
-                  <img
-                    src="../images/nav-cars.png"
-                    alt="Cars"
-                    class="nav-img"
-                  />
-                  <span class="ms-1 d-none d-sm-inline text-light"
-                    >Cars</span
-                  ></a
-                >
-              </li>
-            </ul>
-          </div>
-          <div class="col-8 py-3 px-0">
-            <img src="../images/logo.png" alt="Logo" class="logo" />
-            <div class="side-list py-4 pt-5">
-              <h6 class="p-2 fw-bold side-sub-unclicked">CARS</h6>
-              <h6 class="p-2 side-sub-clicked fw-bold">List Car</h6>
-            </div>
-          </div>
-        </div>
-
+        <div
+          class="row col-auto col-md-3 col-xl-2 px-sm-2 px-0 shadow"
+          id="sidebar"
+        ></div>
         <!-- Main Content -->
-        <div class="col px-0">
+        <div class="main-content col px-0">
           <!-- Header -->
           <header
             class="d-flex flex-row align-items-center justify-content-between shadow-sm py-3"
-          >
-            <!-- Header Content -->
-            <div
-              class="menu-toogle d-flex flex-column justify-content-between px-3"
-            >
-              <div class="bar"></div>
-              <div class="bar"></div>
-              <div class="bar"></div>
-            </div>
-            <div class="right-header">
-              <form class="d-flex" role="search">
-                <input
-                  class="form-control rounded-0 search-input"
-                  type="search"
-                  placeholder="Search"
-                  aria-label="Search"
-                />
-                <button class="search-btn btn rounded-0 fw-bold" type="submit">
-                  Search
-                </button>
-              </form>
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                <img
-                  src="./images/user.png"
-                  alt="User Profile"
-                  class="image-user"
-                />
-                Muhammad Rizki
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">My Profile</a></li>
-                <li><a class="dropdown-item" href="#">FAQ</a></li>
-                <li><a class="dropdown-item" href="#">Report Problem</a></li>
-                <li><a class="dropdown-item" href="#">Settings</a></li>
-                <li><hr class="dropdown-divider" /></li>
-                <li><a class="dropdown-item" href="#">Log Out</a></li>
-              </ul>
-            </div>
-          </header>
+            id="header"
+          ></header>
 
           <!-- Main Content Body -->
           <main class="p-3">
@@ -140,7 +45,7 @@
                 <li class="breadcrumb-item">Cars</li>
                 <li class="breadcrumb-item">List Car</li>
                 <li class="breadcrumb-item active" aria-current="page">
-                  <span class="fw-bold">Add New Car</span>
+                  <span class="fw-normal">Add New Car</span>
                 </li>
               </ol>
             </nav>
@@ -151,6 +56,107 @@
             >
               <h5 class="fw-bold">Add New Car</h5>
             </section>
+
+            <!-- Section: Content -->
+            <form action="/cars/admin/create" method="post" class="bg-light py-5">
+              <div class="container">
+                <div>
+                  <div class="col-12 col-lg-6">
+                    <div class="row">
+                      <div class="col-4">
+                        <label
+                          for="name"
+                          class="form-label"
+                          >Nama<i style="color: red">*</i></label
+                        >
+                      </div>
+                      <div class="col-8">
+                        <div class="mb-3">
+                          <input
+                            type="text"
+                            class="form-control"
+                            name="name"
+                            placeholder="Avanza"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-4">
+                        <label
+                          for="rentPerDay"
+                          class="form-label"
+                          >Sewa Per Hari<i style="color: red">*</i></label
+                        >
+                      </div>
+                      <div class="col-8">
+                        <div class="mb-3">
+                          <input
+                            type="number"
+                            class="form-control"
+                            name="rentPerDay"
+                            placeholder="Rp. 0 -"
+                            min="0"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-4">
+                        <label
+                          for="capacity"
+                          class="form-label"
+                          >Ukuran<i style="color: red">*</i></label
+                        >
+                      </div>
+                      <div class="col-8">
+                        <div class="mb-3">
+                          <select
+                            class="form-select"
+                            name="capacity"
+                            id="capacity"
+                          >
+                            <option hidden>ukuran</option>
+                            <option value="2">Small</option>
+                            <option value="4">Medium</option>
+                            <option value="6">Large</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-4">
+                        <label
+                          for="image"
+                          class="form-label"
+                          >Foto<i style="color: red">*</i></label
+                        >
+                      </div>
+                      <div class="col-8">
+                        <div class="mb-3">
+                          <div class="input-group">
+                            <input
+                              type="file"
+                              class="form-control"
+                              name="image"
+                              required
+                            />
+                          </div>
+                          <div
+                            class="form-text"
+                          >
+                            File Size Max 2Mb
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+              <div class="btn-wrapper d-flex gap-3 position-absolute">
+                <a href="/cars"><button class="cancel-btn px-3 py-2 fw-bold">Cancel</button></a>
+                <button class="save-btn px-3 py-2 fw-bold" type="submit">Save</button>
+              </div>
+            </form>
           </main>
         </div>
       </div>
@@ -158,5 +164,8 @@
 
     <!-- Script JS Untuk Bootstrap -->
     <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Script Sendiri Untuk Components -->
+    <script type="module" src="../scripts/componentInsert.js"></script>
   </body>
 </html>
